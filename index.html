@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store</title>
+    <!-- Google Fonts for Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .navbar {
+            margin-bottom: 30px;
+        }
+        .hero-section {
+            margin-bottom: 30px;
+        }
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        /* Custom font and styling for the title */
+        .navbar-brand {
+            font-family: 'Roboto', sans-serif; /* Applying custom font */
+            font-weight: bold; /* Making the font bold */
+            font-size: 28px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FurnitureStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <!-- Add Login Link -->
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a> <!-- Link to login page -->
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Hero Section with Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-section" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#heroCarousel" data-slide-to="1"></li>
+            <li data-target="#heroCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/background.png" class="d-block w-100" alt="Sofa Set">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Modern Furniture Collection</h5>
+                    <p>Discover our latest range of modern furniture.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/6-seater-dining-table-setTTTTTT.jpg" class="d-block w-100" alt="Second Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Elegant Dining Sets</h5>
+                    <p>Perfect for your stylish dining room.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/sf.png" class="d-block w-100" alt="Third Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Comfortable Sofa Sets</h5>
+                    <p>Add comfort and style to your living room.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/sf.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Set</h5>
+                        <p class="card-text">₹36,000</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Sofa Set', 'This is a comfortable and stylish sofa set perfect for your living room.', '₹36,000')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/tablee.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dining Table</h5>
+                        <p class="card-text">₹22,500</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Dining Table', 'An elegant dining table set perfect for family dinners.', '₹22,500')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/bed frame.avif" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bed Frame</h5>
+                        <p class="card-text">₹30,000</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Bed Frame', 'A sturdy and stylish bed frame for a good night\'s sleep.', '₹30,000')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/officechair.webp" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Office Chair</h5>
+                        <p class="card-text">₹12,000</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Office Chair', 'A comfortable office chair designed for long hours of work.', '₹12,000')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/coffeeee.webp" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Coffee Table</h5>
+                        <p class="card-text">₹15,000</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Coffee Table', 'A stylish coffee table to complement your living room.', '₹15,000')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/wardrobe.jpg" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Wardrobe</h5>
+                        <p class="card-text">₹25,000</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal" onclick="setModalContent('Wardrobe', 'A spacious wardrobe with ample storage space.', '₹25,000')">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="productName"></h4>
+                    <p id="productDescription"></p>
+                    <p id="productPrice"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 FurnitureStore. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function setModalContent(name, description, price) {
+            document.getElementById('productName').innerText = name;
+            document.getElementById('productDescription').innerText = description;
+            document.getElementById('productPrice').innerText = price;
+        }
+    </script>
+</body>
+</html>
